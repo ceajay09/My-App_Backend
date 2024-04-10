@@ -67,7 +67,11 @@ jobs:
           aws-region: eu-central-1
 
       - name: Login to Amazon ECR Public
-        run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/o0z0d1r9
+        run: |
+          AWS_ECR_PUBLIC_LOGIN_PASSWORD=$(aws ecr-public get-login-password --region us-east-1)
+          echo $AWS_ECR_PUBLIC_LOGIN_PASSWORD | docker login --username AWS --password-stdin public.ecr.aws
+        env:
+          AWS_DEFAULT_REGION: us-east-1
 
       - name: Tag the Docker image
         run: docker tag backend:$(date +%s) public.ecr.aws/o0z0d1r9/my-app_backend:latest
