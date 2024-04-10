@@ -74,6 +74,9 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
+        with:
+          registries: "471112833916"
+          registry-type: private
 
       - name: Build, tag, and push docker image to Amazon ECR
         env:
