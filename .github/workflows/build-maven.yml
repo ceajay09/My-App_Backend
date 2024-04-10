@@ -42,39 +42,42 @@ jobs:
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
 
-  dockerize:
-    needs: build-jar
-    runs-on: ubuntu-latest
-    steps:
-     - name: Download math result for job 1
-       uses: actions/download-artifact@v4
-       with:
-          name: backend-jar
-      
-     - name: Build the Docker image
-       uses: actions/checkout@v3
-     - run: docker build . --file Dockerfile --tag backend:$(date +%s)
+#  dockerize:
+#    runs-on: ubuntu-latest
+#    steps:
+#    needs: build-jar
+#     - name: Download math result for job 1
+#       uses: actions/download-artifact@v4
+#       with:
+#          name: backend-jar
+
+#     - name: Build the Docker image
+#       uses: actions/checkout@v3
+#     - run: docker build . --file Dockerfile --tag backend:$(date +%s)
+
 
   push-to-aws:
-    needs: dockerize
-    runs-on: ubuntu-latest
-    steps:
-      - name: Configure AWS credentials (Optional)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-central-1
+    - needs: build-jar
+    - name: Checkout repo
+      uses: actions/checkout@v3
 
-      - name: Login to Amazon ECR Public
-        run: |
-          AWS_ECR_PUBLIC_LOGIN_PASSWORD=$(aws ecr-public get-login-password --region us-east-1)
-          echo $AWS_ECR_PUBLIC_LOGIN_PASSWORD | docker login --username AWS --password-stdin public.ecr.aws
-        env:
-          AWS_DEFAULT_REGION: us-east-1
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
+      with:
+        role-to-assume: arn:aws:iam::471112833916:user/github-actions-cicd
+        aws-region: aws-region-1
 
-      - name: Tag the Docker image
-        run: docker tag backend:$(date +%s) public.ecr.aws/o0z0d1r9/my-app_backend:latest
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Push the Docker image to Amazon ECR Public
-        run: docker push public.ecr.aws/o0z0d1r9/my-app_backend:latest
+    - name: Build, tag, and push docker image to Amazon ECR
+      env:
+        REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        REPOSITORY: c-jaquiery-private
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        echo $REGISTRY/$REPOSITORY:$IMAGE_TAG
+        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+        docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
