@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven Backend
+name: CI for Backend
 
 on:
   push:
@@ -62,6 +62,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Download jar from build-jar job
+        uses: actions/download-artifact@v4
+        with:
+          name: backend-jar
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
