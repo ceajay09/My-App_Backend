@@ -2,17 +2,17 @@ package com.example.myproject.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class loginCredentials {
+/**
+ * Encapsulates login credentials, including email and password, for authentication purposes.
+ */
+public class LoginCredentials {
+	//TODO: Annotations (@Email, @NotNull, @Data, @NoArgsConstructor, @AllArgsConstructor, @NotBlank)
+
 	@JsonProperty("email")
-	protected String email;
+	private String email;
 
 	@JsonProperty("password")
-	protected String password;
-	
-	
-	public String toString() {
-		return this.email+" "+this.password;
-	}
+	private String password;
 
 	public String getEmail() {
 		return email;
@@ -28,5 +28,10 @@ public class loginCredentials {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "LoginCredentials{email='" + email + "'}";
 	}
 }

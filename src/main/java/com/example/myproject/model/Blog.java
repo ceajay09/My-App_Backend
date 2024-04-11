@@ -3,11 +3,16 @@ package com.example.myproject.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Represents a blog post in the application, containing the post's unique identifier and description.
+ */
 @Document
 public class Blog {
+    //TODO: Annotations (@Email, @NotNull, @Data, @NoArgsConstructor, @AllArgsConstructor, @NotBlank)
+
     @Id
-    protected String id;
-    protected String title;
+    private String id;
+    private String description;
 
 
     public String getId() {
@@ -18,11 +23,11 @@ public class Blog {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDescription() {
+        return description;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -9,9 +9,12 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import java.net.MalformedURLException;
 
+/**
+ * Service class for managing PDF file downloads. Utilizes Spring's ResourceLoader
+ * to access PDF resources and facilitates their download.
+ */
 @Service
 public class PDFService {
     private static final Logger logger = LogManager.getLogger(PDFService.class);
@@ -25,10 +28,11 @@ public class PDFService {
 
 
     public ResponseEntity<Resource> downloadPDF(String fileName) throws MalformedURLException {
+        logger.info("Download request for file: {}", fileName);
         Resource pdfFile = resourceLoader.getResource("classpath:assets/" + fileName);
-
         if(!pdfFile.exists()){
-            logger.info("Download fehlgeschlagen. " + fileName + " nicht gefunden.");
+            String errorMessage = "File not found: " + fileName;
+            logger.info(errorMessage);
             return ResponseEntity.notFound().build();
         }
         logger.info("Download: " + fileName);

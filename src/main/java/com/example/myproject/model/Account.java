@@ -3,18 +3,23 @@ package com.example.myproject.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
+/**
+ * Represents an account in the application, including personal and authentication details.
+ */
 @Document
 public class Account {
+	//TODO: Annotations (@Email, @NotNull, @Data, @NoArgsConstructor, @AllArgsConstructor, @NotBlank)
 
 	@Id
-	protected String id;
-	protected String firstName;
-	protected String lastName;
-	protected String email;
-	protected String password;
-	protected String company;
-	protected String phoneNumber;
-	protected boolean admin;
+	private String id;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password; //TODO: Hash password before!
+	private String company;
+	private String phoneNumber;
+	private boolean admin;
 
 	public String getID() {
 		return id;
