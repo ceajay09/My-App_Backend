@@ -10,7 +10,7 @@ com\example\myproject\model\Account.class
 com\example\myproject\repository\AccountRepository.class
 com\example\myproject\service\TokenService.class
 com\example\myproject\Application.class
-com\example\myproject\model\loginCredentials.class
+com\example\myproject\model\LoginCredentials.class
 com\example\myproject\service\AccountService.class
 com\example\myproject\service\BlogService.class
 com\example\myproject\util\TokenUtil.class
