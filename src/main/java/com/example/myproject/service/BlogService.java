@@ -6,16 +6,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
+/**
+ * Service class for managing blog-related operations, including retrieving blog entries from the database.
+ */
 @Service
 public class BlogService {
 
     private final BlogRepository blogRepository;
     private static final Logger logger = LogManager.getLogger(BlogService.class);
 
-    @Autowired // TODO: in den konstruktor verpacken
+    @Autowired
     public BlogService(BlogRepository blogRepository) {
         this.blogRepository = blogRepository;
     }

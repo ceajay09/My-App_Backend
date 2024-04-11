@@ -16,49 +16,50 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Map;
 
-// @RequestMapping("api/")
+/**
+ * Handles incoming HTTP requests for account management, blog operations,
+ * and PDF downloads. This controller provides endpoints for registering,
+ * logging in and out of accounts, retrieving account and blog information,
+ * and downloading PDF resources.
+ */
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
 @PropertySource("classpath:application.properties")
 public class RequestHandler {
 
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(RequestHandler.class);
     private final AccountRepository accountRepository;
     private final AccountService accountService;
-    private final BlogService blogService;
     private final BlogRepository blogRepository;
-    private PDFService pdfService;
+    private final PDFService pdfService;
 
     public RequestHandler(AccountRepository accountRepository,
                           AccountService accountService,
-                          BlogService blogService,
                           BlogRepository blogRepository,
                           PDFService pdfService) {
         this.accountRepository = accountRepository;
         this.accountService = accountService;
-        this.blogService = blogService;
         this.blogRepository = blogRepository;
         this.pdfService = pdfService;
     }
 
-    // Erstellen eines neuen Benutzers
-    @PostMapping(path = "/api/register", produces = "application/json")
+    @PostMapping(path = "api/register", produces = "application/json")
     public ResponseEntity<String> registerUser(@RequestBody Map<String, String> request) {
+        logger.info("Registering new user.");
         return accountService.registerUser(request);
     }
 
-    @PostMapping(path = "/api/login", produces = "application/json")
+    @PostMapping(path = "api/login", produces = "application/json")
     public ResponseEntity<String> loginUser(@RequestBody Map<String, String> request) {
         return accountService.loginUser(request);
     }
 
-    @PostMapping(path = "/api/logout", produces = "application/json")
-    public ResponseEntity<?> logoutUser(@RequestHeader("Authorization") String token) {
+    @PostMapping(path = "api/logout", produces = "application/json")
+    public ResponseEntity<Map<String, Object>> logoutUser(@RequestHeader("Authorization") String token) {
         return accountService.logoutUser(token);
     }
 
@@ -68,8 +69,8 @@ public class RequestHandler {
         return accountRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
-    @GetMapping(path = "/api/dashboard", produces = "application/json")
-    public ResponseEntity<?> getAccountInfoByToken(Authentication authentication) {
+    @GetMapping(path = "api/dashboard", produces = "application/json")
+    public ResponseEntity<Account> getAccountInfoByToken(Authentication authentication) {
         return accountService.getAccountInfoByToken(authentication);
     }
 
@@ -80,7 +81,6 @@ public class RequestHandler {
 
     @GetMapping(path = "api/getBlogs", produces = "application/json") //TODO: Logger? TODO: Errorhandling
     public List<Blog> getBlogs() {
-        logger.info("getBlogs aufgerufen"); //TODO
         return blogRepository.findAll();
     }
 
