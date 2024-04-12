@@ -1,6 +1,8 @@
 version: '3.8'
 services:
   backend:
+    container_name: backend-dev
+    image: backend-dev
     build: c:/Users/Cjaqu/intellij_workspace/My-App_Backend
     ports:
       - "8080:8080"
@@ -16,6 +18,8 @@ services:
       #PROFILE: dev
 
   frontend:
+    container_name: frontend-dev
+    image: frontend-dev
     build: c:/Users/Cjaqu/visualStudioCode-projects/My-App_Frontend
     ports:
       - "3000:80"

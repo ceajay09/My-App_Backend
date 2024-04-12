@@ -1,3 +1,2 @@
 application-dev.properties
 src/main/resources/environment-variables.env
-application.properties
