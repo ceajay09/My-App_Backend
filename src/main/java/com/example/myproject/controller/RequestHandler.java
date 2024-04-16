@@ -27,7 +27,7 @@ import java.util.Map;
  * and downloading PDF resources.
  */
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://frontend:80", "http://frontend"})
 @PropertySource("classpath:application.properties")
 public class RequestHandler {
 

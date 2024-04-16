@@ -1,13 +1,14 @@
-version: '3.8'
 services:
   backend:
     container_name: backend-dev
-    image: backend-dev
+    image: 471112833916.dkr.ecr.eu-central-1.amazonaws.com/my-app_backend:dev
     build: c:/Users/Cjaqu/intellij_workspace/My-App_Backend
     ports:
       - "8080:8080"
     env_file:
       - ./src/main/resources/environment-variables.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
     #environment:
       #DB_USER: ${DB_USER}
       #DB_PASS: ${DB_PASS}
@@ -19,9 +20,9 @@ services:
 
   frontend:
     container_name: frontend-dev
-    image: frontend-dev
+    image: 471112833916.dkr.ecr.eu-central-1.amazonaws.com/my-app_frontend:dev
     build: c:/Users/Cjaqu/visualStudioCode-projects/My-App_Frontend
     ports:
       - "3000:80"
-    environment:
-      REACT_APP_BACKEND_URL: http://localhost:8080
+#    environment:
+#      REACT_APP_BACKEND_URL: http://localhost:8080
