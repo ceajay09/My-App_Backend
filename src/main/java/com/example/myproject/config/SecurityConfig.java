@@ -1,5 +1,7 @@
 package com.example.myproject.config;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,6 +22,8 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    private static final Logger logger = LogManager.getLogger(SecurityConfig.class);
+
      /**
      * Defines the security filter chain that applies security configurations to HTTP requests.
      * This method configures endpoint access permissions, requiring authentication for most requests
@@ -35,7 +39,7 @@ public class SecurityConfig {
         http
                 // Using DSL for explicit configuration
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login", "/register","/blog","/aboutMe","/",
+                        .requestMatchers("/api/**" ,"/login", "/register","/blog","/aboutMe","/",
                                 "/aboutThisWebsite", "/techInsights", "/latestPosts", "/contactMe",
                                 "/imprint", "/api/getBlogs", "/api/downloadPDF/**").permitAll() // Anpassung der Zugriffserlaubnis TODO: Zugriffe
                         .anyRequest().authenticated() // Anforderung der Authentifizierung für alle anderen Anfragen
@@ -59,5 +63,3 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
-
-
