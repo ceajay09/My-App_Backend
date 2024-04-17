@@ -4,7 +4,8 @@ COPY target/my-app*.jar my-app.jar
 ENV DB_USER=null
 ENV DB_INSTANCE=null
 ENV DB_PASS=null
-ENV PROFILE=default
+#ENV PROFILE=default
+ENV PROFILE=null
 ENV APP_PORT=8080
 EXPOSE ${APP_PORT}/tcp
 ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILE}", "-jar","/my-app.jar"]
