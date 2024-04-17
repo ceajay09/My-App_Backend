@@ -6,6 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,16 +25,27 @@ public class BlogService {
     }
 
     public List<Blog> getAllBlogs() { //Ladet alle blogs
+        logger.info("Attempting to retrieve all blogs from the database.");
+        List<Blog> blogs = new ArrayList<>();
         int count = 0;
-        List<Blog> blogs = blogRepository.findAll();
-        for (Blog blog : blogs) {
-            logger.info("Retrieved Blog from DB:"+"\t" + blog.getId());
-            count += 1;
+
+        try {
+            blogs = blogRepository.findAll();
+            if (blogs.isEmpty()) {
+                logger.info("No blogs found in the database.");
+            } else {
+                for (Blog blog : blogs) {
+                    logger.info("Retrieved Blog from DB:"+"\t" + blog.getId());
+                    count++;
+                }
+                logger.info(count + " Blog(s) successfully retrieved from Database");
+            }
+        } catch (Exception e) {
+            logger.error("Error retrieving blogs from database", e);
         }
-        logger.info(count + " Blog(s) successfully retrieved from Database");
+
         return blogs;
     }
-
 }
 
 
