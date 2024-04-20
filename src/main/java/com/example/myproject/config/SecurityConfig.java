@@ -2,6 +2,7 @@ package com.example.myproject.config;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,6 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import static org.springframework.security.config.Customizer.withDefaults;
+
 
 /**
  * Configures security settings for the application, including HTTP security,
@@ -39,6 +41,7 @@ public class SecurityConfig {
         http
                 // Using DSL for explicit configuration
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(EndpointRequest.to("health")).permitAll()
                         .requestMatchers("/api/**" ,"/login", "/register","/blog","/aboutMe","/",
                                 "/aboutThisWebsite", "/techInsights", "/latestPosts", "/contactMe",
                                 "/imprint", "/api/getBlogs", "/api/downloadPDF/**").permitAll() // Anpassung der Zugriffserlaubnis TODO: Zugriffe
