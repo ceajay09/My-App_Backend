@@ -42,7 +42,7 @@ public class SecurityConfig {
                 // Using DSL for explicit configuration
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(EndpointRequest.to("health")).permitAll()
-                        .requestMatchers("/api/**" ,"/login", "/register","/blog","/aboutMe","/",
+                        .requestMatchers("/api/**", "/actuator/**","/login", "/register","/blog","/aboutMe","/",
                                 "/aboutThisWebsite", "/techInsights", "/latestPosts", "/contactMe",
                                 "/imprint", "/api/getBlogs", "/api/downloadPDF/**").permitAll() // Anpassung der Zugriffserlaubnis TODO: Zugriffe
                         .anyRequest().authenticated() // Anforderung der Authentifizierung für alle anderen Anfragen
