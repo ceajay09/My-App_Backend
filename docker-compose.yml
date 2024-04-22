@@ -1,20 +1,89 @@
+version: "3"
 services:
   backend:
     container_name: backend-dev
     image: 471112833916.dkr.ecr.eu-central-1.amazonaws.com/my-app_backend:dev
-    build: c:/Users/Cjaqu/intellij_workspace/My-App_Backend
-    ports:
-      - "8080:8080"
-    env_file:
-      - ./src/main/resources/environment-variables.env
     environment:
-      - SPRING_PROFILES_ACTIVE=dev
+      - PROFILE=default
+      - DB_USER=cjaquiery
+      - DB_PASS=**********
+      - DB_INSTANCE=mywebapp
+      - SPRING_LOG_LEVEL=INFO
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=Host(`cesarjaquiery.ch`) && PathPrefix(`/api/`)"
+      - "traefik.http.services.backend.loadbalancer.server.port=8080"
+    networks:
+      - frontend
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/actuator/health || exit 1"]
+      interval: 45s
+      timeout: 20s
+      retries: 5
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: My-App
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: Spring-BE
 
   frontend:
     container_name: frontend-dev
     image: 471112833916.dkr.ecr.eu-central-1.amazonaws.com/my-app_frontend:dev
-    build: c:/Users/Cjaqu/visualStudioCode-projects/My-App_Frontend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`cesarjaquiery.ch`)"
+      - "traefik.http.services.frontend.loadbalancer.server.port=80"
+    networks:
+      - frontend
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: My-App
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: React-FE
+
+  traefik:
+    image: traefik:v2.11
+    container_name: traefik
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.websecure.address=:443"
+      - "--ping"
     ports:
-      - "3000:80"
-#    environment:
-#      REACT_APP_BACKEND_URL: http://localhost:8080
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - frontend
+    labels:
+      - "traefik.http.services.traefik.loadbalancer.healthcheck.path=/health"
+      - "traefik.http.services.traefik.loadbalancer.healthcheck.interval=10s"
+      - "traefik.http.services.traefik.loadbalancer.healthcheck.timeout=5s"
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--ping"]
+      interval: 45s
+      timeout: 20s
+      retries: 5
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: My-App
+        awslogs-region: eu-central-1
+        awslogs-stream-prefix: Traefik
+
+networks:
+  frontend:
+    driver: bridge
