@@ -27,10 +27,10 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:3000", "http://localhost", "http://frontend:80") //TODO: Hardcoded Values (inject the value from a properties or YAML file)
+                .allowedOrigins("http://localhost:3000", "http://frontend:80") //TODO: Hardcoded Values (inject the value from a properties or YAML file)
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
-        logger.info("CORS mappings added for /api/** to allow origins: http://frontend:80");
+        logger.info("CORS mappings added for /api/** to allow origins: http://frontend:80 + http://localhost:3000");
     }
 }
