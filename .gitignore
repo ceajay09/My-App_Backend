@@ -2,3 +2,4 @@ application-dev.properties
 src/main/resources/environment-variables.env
 target
 docker-compose.yml
+docker-compose.dev.yml
