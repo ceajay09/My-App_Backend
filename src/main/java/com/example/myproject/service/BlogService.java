@@ -2,6 +2,7 @@ package com.example.myproject.service;
 
 import com.example.myproject.model.Blog;
 import com.example.myproject.repository.BlogRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,15 @@ public class BlogService {
         }
 
         return blogs;
+    }
+
+    public List<Blog> getBlogs(HttpServletRequest request) {
+        String clientIP = request.getHeader("X-Forwarded-For");
+        if (clientIP == null) {
+            clientIP = request.getRemoteAddr(); // Fallback to remote address if header is not set
+        }
+        logger.info("Request received from IP: " + clientIP);
+        return blogRepository.findAll();
     }
 }
 
