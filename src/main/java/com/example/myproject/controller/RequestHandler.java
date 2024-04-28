@@ -7,6 +7,7 @@ import com.example.myproject.repository.BlogRepository;
 import com.example.myproject.service.AccountService;
 import com.example.myproject.service.BlogService;
 import com.example.myproject.service.PDFService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.PropertySource;
@@ -36,15 +37,18 @@ public class RequestHandler {
     private final AccountService accountService;
     private final BlogRepository blogRepository;
     private final PDFService pdfService;
+    private final BlogService blogService;
 
     public RequestHandler(AccountRepository accountRepository,
                           AccountService accountService,
                           BlogRepository blogRepository,
-                          PDFService pdfService) {
+                          PDFService pdfService,
+                          BlogService blogService) {
         this.accountRepository = accountRepository;
         this.accountService = accountService;
         this.blogRepository = blogRepository;
         this.pdfService = pdfService;
+        this.blogService = blogService;
     }
 
     @PostMapping(path = "api/register", produces = "application/json")
@@ -80,8 +84,8 @@ public class RequestHandler {
     }
 
     @GetMapping(path = "api/getBlogs", produces = "application/json") //TODO: Logger? TODO: Errorhandling
-    public List<Blog> getBlogs() {
-        return blogRepository.findAll();
+    public List<Blog> getBlogs(HttpServletRequest request) {
+        return blogService.getBlogs(request);
     }
 
     @GetMapping(path = "api/downloadPDF/{fileName}", produces = "application/json")

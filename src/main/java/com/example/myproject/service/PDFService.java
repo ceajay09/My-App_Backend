@@ -28,7 +28,6 @@ public class PDFService {
 
 
     public ResponseEntity<Resource> downloadPDF(String fileName) throws MalformedURLException {
-        logger.info("Download request for file: {}", fileName);
         Resource pdfFile = resourceLoader.getResource("classpath:assets/" + fileName);
         if(!pdfFile.exists()){
             String errorMessage = "File not found: " + fileName;
