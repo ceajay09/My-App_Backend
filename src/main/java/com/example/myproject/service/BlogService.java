@@ -50,8 +50,10 @@ public class BlogService {
 
     public List<Blog> getBlogs(HttpServletRequest request) {
         String clientIP = request.getHeader("X-Forwarded-For");
-        if (clientIP == null) {
-            clientIP = request.getRemoteAddr(); // Fallback to remote address if header is not set
+        if (clientIP != null && !clientIP.isEmpty()) {
+            clientIP = clientIP.split(",")[0].trim();
+        } else {
+            clientIP = request.getRemoteAddr();
         }
         logger.info("Request received from IP: " + clientIP);
         return blogRepository.findAll();
