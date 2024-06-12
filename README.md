@@ -15,7 +15,7 @@ The backend employs various technologies and frameworks to ensure robust and sec
 ## Features
 
 - **User Authentication**: Features secure login and registration processes.
-- **Blog Management**: Allows to create, read, update, and delete blog posts.
+- **Blog Management**: Allows to create, read, update, and delete blogpost posts.
 - **PDF Download**: Offers functionality for downloading PDF files for offline viewing.
 
 ## Project Structure
@@ -44,9 +44,9 @@ This well-organized codebase enhances maintainability and functionality understa
 
 - **`Config`**: Includes security and operational settings.
 - **`Controllers`**: Manages HTTP interactions.
-- **`Services`**: Contains logic for user account management and blog features.
+- **`Services`**: Contains logic for user account management and blogpost features.
 - **`Repositories`**: Engages with MongoDB for data operations.
-- **`Models`**: Defines the data structure for user and blog information.
+- **`Models`**: Defines the data structure for user and blogpost information.
 
 ## Docker Configuration
 
