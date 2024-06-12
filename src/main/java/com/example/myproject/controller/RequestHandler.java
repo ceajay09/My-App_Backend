@@ -1,7 +1,7 @@
 package com.example.myproject.controller;
 
 import com.example.myproject.model.Account;
-import com.example.myproject.model.Blog;
+import com.example.myproject.model.Blogpost;
 import com.example.myproject.repository.AccountRepository;
 import com.example.myproject.repository.BlogRepository;
 import com.example.myproject.service.AccountService;
@@ -20,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 /**
  * Handles incoming HTTP requests for account management, blog operations,
@@ -78,14 +79,14 @@ public class RequestHandler {
         return accountService.getAccountInfoByToken(authentication);
     }
 
-    @GetMapping(path = "api/blog/{id}", produces = "application/json") //TODO: Logger? //TODO: in getblog umbenennen
-    public Blog getBlogById(@PathVariable String id) {
+    @GetMapping(path = "api/blogpost/{id}", produces = "application/json") //TODO: Logger? //TODO: in getblog umbenennen
+    public Blogpost getBlogpostById(@PathVariable String id) {
         return blogRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
-    @GetMapping(path = "api/getBlogs", produces = "application/json") //TODO: Logger? TODO: Errorhandling
-    public List<Blog> getBlogs(HttpServletRequest request) {
-        return blogService.getBlogs(request);
+    @GetMapping(path = "api/getBlogposts", produces = "application/json") //TODO: Logger? TODO: Errorhandling
+    public Queue<Blogpost> getBlogposts(HttpServletRequest request) {
+        return blogService.getBlogposts(request);
     }
 
     @GetMapping(path = "api/downloadPDF/{fileName}", produces = "application/json")

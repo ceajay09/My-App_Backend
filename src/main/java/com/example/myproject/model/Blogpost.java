@@ -3,17 +3,19 @@ package com.example.myproject.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * Represents a blog post in the application, containing the post's unique identifier and description.
+ * Represents a blog post in the application, containing the post's unique identifier and description in english and german.
  */
 @Document
-public class Blog {
+public class Blogpost {
     //TODO: Annotations (@Email, @NotNull, @Data, @NoArgsConstructor, @AllArgsConstructor, @NotBlank)
 
     @Id
     private String id;
-    private String description;
-
+    private Map<String, String> description;
 
     public String getId() {
         return id;
@@ -23,11 +25,11 @@ public class Blog {
         this.id = id;
     }
 
-    public String getDescription() {
+    public Map<String, String> getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(Map<String, String> description) {
         this.description = description;
     }
 }
