@@ -8,15 +8,15 @@
 
 name: CI for Backend
 on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
   push:
     branches:
       - main
     paths:
       - 'cesarjaquiery.ch/**'
-  pull_request:
-    branches:
-      - main
-    types: [closed]
 
 jobs:
   build-jar:
