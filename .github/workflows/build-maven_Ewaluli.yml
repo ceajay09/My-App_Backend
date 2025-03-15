@@ -81,5 +81,6 @@ jobs:
           IMAGE_TAG: dev
         run: |
           echo $REGISTRY/$REPOSITORY:$IMAGE_TAG
+          cd Ewaluli
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
