@@ -19,7 +19,6 @@ on:
       - main
     types: [closed]
 
-
 jobs:
   build-jar:
     permissions: write-all
@@ -35,6 +34,7 @@ jobs:
         cache: maven
     - name: Build Backend with Maven
       run: |
+          cd Ewaluli
           mvn -B package --file pom.xml
     - name: Archive Backend Jar
       uses: actions/upload-artifact@v4
