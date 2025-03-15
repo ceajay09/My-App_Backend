@@ -59,7 +59,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: backend-jar
-          path: target
+          path: Ewaluli/target
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
