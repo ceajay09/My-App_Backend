@@ -23,7 +23,7 @@ services:
     logging:
       driver: awslogs
       options:
-        awslogs-group: My-App
+        awslogs-group: My-App-Cluster
         awslogs-region: eu-central-1
         awslogs-stream-prefix: Spring-BE
 
@@ -44,7 +44,7 @@ services:
     logging:
       driver: awslogs
       options:
-        awslogs-group: My-App
+        awslogs-group: My-App-Cluster
         awslogs-region: eu-central-1
         awslogs-stream-prefix: React-FE
 
@@ -58,6 +58,13 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
       - "--ping"
+      - "--log.level=ERROR"
+      - "--log.format=json"
+      - "--accesslog=true"
+      - "--accesslog.format=json"
+      - "--accesslog.fields.headers.names.X-Real-IP=keep"
+      - "--entrypoints.web.forwardedHeaders.trustedIPs=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+      - "--entrypoints.websecure.forwardedHeaders.trustedIPs=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
     ports:
       - "80:80"
       - "443:443"
@@ -72,6 +79,8 @@ services:
       - "traefik.http.services.traefik.loadbalancer.healthcheck.path=/health"
       - "traefik.http.services.traefik.loadbalancer.healthcheck.interval=10s"
       - "traefik.http.services.traefik.loadbalancer.healthcheck.timeout=5s"
+      - "traefik.http.middlewares.forward-headers.forwardedHeaders.insecure=true"
+      - "traefik.http.routers.backend.middlewares=forward-headers"
     healthcheck:
       test: ["CMD", "traefik", "healthcheck", "--ping"]
       interval: 45s
@@ -80,7 +89,7 @@ services:
     logging:
       driver: awslogs
       options:
-        awslogs-group: My-App
+        awslogs-group: My-App-Cluster
         awslogs-region: eu-central-1
         awslogs-stream-prefix: Traefik
 
