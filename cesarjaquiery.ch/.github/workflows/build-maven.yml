@@ -9,10 +9,16 @@
 name: CI for Backend
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cesarjaquiery.ch/**'
   pull_request:
     branches:
       - main
     types: [closed]
+
 
 jobs:
   build-jar:
@@ -69,7 +75,7 @@ jobs:
       - name: Build, tag, and push docker image to Amazon ECR
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          REPOSITORY: ewaluli-backend-website
+          REPOSITORY: my-app_backend
           IMAGE_TAG: dev
         run: |
           echo $REGISTRY/$REPOSITORY:$IMAGE_TAG

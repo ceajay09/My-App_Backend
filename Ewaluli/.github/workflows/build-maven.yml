@@ -9,6 +9,11 @@
 name: CI for Backend
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Ewaluli/**'
   pull_request:
     branches:
       - main
