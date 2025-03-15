@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09a52bdc-da1b-43d8-9c1e-8905d682dd8e" name="Changes" comment="Update CV">
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/myproject/controller/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/myproject/controller/RequestHandler.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="V1.1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ceajay09&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ceajay09/My-App_Backend.git&quot;,
+    &quot;accountId&quot;: &quot;14c76d93-c200-4b9f-93f7-1604c3e2ea28&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2etlwsMtDpoYFKfhU7WYgDFGRwc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application dev.executor": "Run",
+    "Application.Application.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Maven.my-app [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Cjaqu/intellij_workspace/My-App_Backend/src/main/resources/assets",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cjaqu\intellij_workspace\My-App_Backend\src\main\resources\assets" />
+      <recent name="C:\Users\Cjaqu\intellij_workspace\My-App_Backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cjaqu\intellij_workspace\My-App_Backend\src\main\resources\assets" />
+      <recent name="C:\Users\Cjaqu\intellij_workspace\My-App_Backend\src\main\resources" />
+      <recent name="C:\Users\Cjaqu\intellij_workspace\My-App_Backend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application dev">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Application dev" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.myproject.Application" />
+      <module name="my-app" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.myproject.Application" />
+      <module name="my-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myproject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application dev" />
+      <item itemvalue="Application.Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09a52bdc-da1b-43d8-9c1e-8905d682dd8e" name="Changes" comment="" />
+      <created>1712731996371</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712731996371</updated>
+    </task>
+    <task id="LOCAL-00017" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712755069494</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712755069494</updated>
+    </task>
+    <task id="LOCAL-00018" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712755231012</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712755231012</updated>
+    </task>
+    <task id="LOCAL-00019" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712755274794</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712755274794</updated>
+    </task>
+    <task id="LOCAL-00020" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712756266630</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712756266630</updated>
+    </task>
+    <task id="LOCAL-00021" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712756489486</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712756489486</updated>
+    </task>
+    <task id="LOCAL-00022" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712756612941</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712756612941</updated>
+    </task>
+    <task id="LOCAL-00023" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712757738119</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712757738119</updated>
+    </task>
+    <task id="LOCAL-00024" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712757962977</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712757962977</updated>
+    </task>
+    <task id="LOCAL-00025" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712758079104</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712758079104</updated>
+    </task>
+    <task id="LOCAL-00026" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712758186481</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712758186481</updated>
+    </task>
+    <task id="LOCAL-00027" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712758493989</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712758493989</updated>
+    </task>
+    <task id="LOCAL-00028" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712758811894</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712758811894</updated>
+    </task>
+    <task id="LOCAL-00029" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712760017531</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712760017531</updated>
+    </task>
+    <task id="LOCAL-00030" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712760309090</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712760309090</updated>
+    </task>
+    <task id="LOCAL-00031" summary="CI-CD workflow">
+      <option name="closed" value="true" />
+      <created>1712760609342</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712760609342</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Clean Code">
+      <option name="closed" value="true" />
+      <created>1712796111625</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712796111625</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Configure docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1712847293626</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712847293626</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Edit .yml file">
+      <option name="closed" value="true" />
+      <created>1712930150365</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1712930150366</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Edit .yml file">
+      <option name="closed" value="true" />
+      <created>1712930592179</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712930592179</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713279904103</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713279904103</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713282369880</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713282369880</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713343510733</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1713343510734</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713346110884</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1713346110884</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713346533772</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713346533772</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713347472328</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713347472328</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713347599955</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713347599955</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713348520374</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713348520374</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713349397806</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1713349397806</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Edit docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1713360225587</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1713360225587</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713626235195</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1713626235196</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713630493402</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1713630493402</updated>
+    </task>
+    <task id="LOCAL-00048" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713630902815</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1713630902815</updated>
+    </task>
+    <task id="LOCAL-00049" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713639130719</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1713639130719</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713639300597</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1713639300598</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713654740638</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1713654740639</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713655561493</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1713655561493</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713727257741</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1713727257743</updated>
+    </task>
+    <task id="LOCAL-00054" summary="add health check for aws">
+      <option name="closed" value="true" />
+      <created>1713783727263</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1713783727264</updated>
+    </task>
+    <task id="LOCAL-00055" summary="edit http links">
+      <option name="closed" value="true" />
+      <created>1713805562254</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1713805562255</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Modify README.md">
+      <option name="closed" value="true" />
+      <created>1713816108160</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1713816108161</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Edit Logs and getBlogs">
+      <option name="closed" value="true" />
+      <created>1714333616278</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1714333616279</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Edit CV">
+      <option name="closed" value="true" />
+      <created>1714498942324</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1714498942325</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Edit WebConfig.java">
+      <option name="closed" value="true" />
+      <created>1714565677864</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1714565677865</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Edit WebConfig.java + BlogService.java&#10;Add new CV">
+      <option name="closed" value="true" />
+      <created>1716926776197</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1716926776198</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Translate blogpost (old=Blog --&gt; new Blogpost)&#10;Make Queue out of bloglist (reversed)">
+      <option name="closed" value="true" />
+      <created>1718215992441</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1718215992444</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Translate blogpost (old=Blog --&gt; new Blogpost)&#10;Make Queue out of bloglist (reversed)">
+      <option name="closed" value="true" />
+      <created>1730543774789</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1730543774790</updated>
+    </task>
+    <task id="LOCAL-00063" summary="modify CORS">
+      <option name="closed" value="true" />
+      <created>1731795348406</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1731795348406</updated>
+    </task>
+    <task id="LOCAL-00064" summary="modify CORS">
+      <option name="closed" value="true" />
+      <created>1731806613975</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1731806613975</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Update CV">
+      <option name="closed" value="true" />
+      <created>1733078038923</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1733078038924</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="V1.1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Setup Backend without Application-dev.properties" />
+    <MESSAGE value="CI-CD workflow" />
+    <MESSAGE value="Clean Code" />
+    <MESSAGE value="Configure docker-compose.yml" />
+    <MESSAGE value="Edit .yml file" />
+    <MESSAGE value="Edit docker-compose.yml" />
+    <MESSAGE value="add health check for aws" />
+    <MESSAGE value="edit http links" />
+    <MESSAGE value="Modify README.md" />
+    <MESSAGE value="Edit Logs and getBlogs" />
+    <MESSAGE value="Edit CV" />
+    <MESSAGE value="Edit WebConfig.java" />
+    <MESSAGE value="Edit WebConfig.java + BlogService.java&#10;Add new CV" />
+    <MESSAGE value="Translate blogpost (old=Blog --&gt; new Blogpost)&#10;Make Queue out of bloglist (reversed)" />
+    <MESSAGE value="modify CORS" />
+    <MESSAGE value="Update CV" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CV" />
+  </component>
+</project>
