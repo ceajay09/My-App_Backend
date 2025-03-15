@@ -29,7 +29,7 @@ import java.util.Queue;
  * and downloading PDF resources.
  */
 @RestController
-@CrossOrigin(origins = {"http://frontend:80", "http://localhost:3000"})
+@CrossOrigin(origins = {"https://cesarjaquiery.ch", "http://localhost:3000"})
 @PropertySource("classpath:application.properties")
 public class RequestHandler {
 
