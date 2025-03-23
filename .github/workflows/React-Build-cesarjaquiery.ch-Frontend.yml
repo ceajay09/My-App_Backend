@@ -37,7 +37,7 @@ jobs:
         npm ci
         npm run build
       env:
-        REACT_APP_API_URL: ${{ '' }} #Empty String
+        VITE_API_URL: ${{ '' }} #Empty String
 
     - name: Archive Frontend Build Artefact
       uses: actions/upload-artifact@v4
