@@ -8,11 +8,11 @@ on:
     branches:
       - main
     types: [closed]
-  push:
-    branches:
-      - main
-    paths:
-      - 'My-App_Frontend/**'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'My-App_Frontend/**'
 
 jobs:
 
@@ -32,9 +32,6 @@ jobs:
     - run: |
         cd My-App_Frontend
         npm ci --legacy-peer-deps
-    - run: |
-        cd My-App_Frontend
-        npm ci
         npm run build
       env:
         VITE_API_URL: ${{ '' }} #Empty String
