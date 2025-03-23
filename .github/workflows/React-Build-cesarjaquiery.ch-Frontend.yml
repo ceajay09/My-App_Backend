@@ -31,7 +31,7 @@ jobs:
         cache-dependency-path: My-App_Frontend/package-lock.json
     - run: |
         cd My-App_Frontend
-        npm ci --legacy-peer-deps
+        npm ci || npm install
         npm run build
       env:
         VITE_API_URL: ${{ '' }} #Empty String
@@ -40,7 +40,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: frontend-react
-        path: My-App_Frontend/build
+        path: My-App_Frontend/dist
 
   push-to-aws:
     needs: build-react
@@ -55,9 +55,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-react
-          path: My-App_Frontend/build
-
-
+          path: My-App_Frontend/dist
 
 
       - name: Configure AWS credentials
