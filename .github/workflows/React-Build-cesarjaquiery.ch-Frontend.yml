@@ -1,7 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Node.js cesarjaquiery.ch CI
+name: Node.js cesarjaquiery.ch-Frontend
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [22.x]
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -34,7 +34,8 @@ jobs:
         npm ci --legacy-peer-deps
     - run: |
         cd My-App_Frontend
-        CI=false npm run build --if-present 
+        npm ci
+        npm run build
       env:
         REACT_APP_API_URL: ${{ '' }} #Empty String
 
