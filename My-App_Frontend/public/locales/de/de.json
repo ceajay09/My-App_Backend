@@ -1,0 +1,146 @@
+{
+  "aboutMe": {
+    "title": "Über Mich",
+    "contactDetails": "Kontaktdaten",
+    "qualification": "Qualifikation:",
+    "qualificationDetail": "Wirtschaftsinformatik BSc (FHNW)",
+    "age": "Alter:",
+    "ageDetail": "28",
+    "phoneNumber": "Telefonnummer:",
+    "showNumber": "Nummer anzeigen",
+    "email": "E-Mail:",
+    "basedIn": "Wohnort:",
+    "basedInDetail": "Basel, Schweiz",
+    "downloadCV": "DOWNLOAD CV",
+    "interestList": "Kleine private IT-Projekte, Klettern, Wandern, Wassersport, Tauchen",
+    "hello": "Wer bin ich?",
+    "techJourney": "Wie begann meine Reise?",
+    "techJourneyDetail": "Schon in jungen Jahren war ich von der Welt der IT fasziniert. Meine Erfahrungen als Werkstudent bei einem renommierten Pharmaunternehmen vertieften mein Verständnis für moderne Technologien und Prozessoptimierung, was mein Interesse in diesem Bereich verstärkte. Während meines Studiums in der Wirtschaftsinformatik, bei dem ich mich auf Programmiermodule konzentrierte, engagierte ich mich aktiv in praktischen Projekten mit Unternehmen als Kunden, übernahm gerne Verantwortung und setzte theoretisches Wissen in realen Situationen um. Mit meinem Arbeitgeber Opacc, kann ich neue Verantwortungen übernehmen und meine Programmiererfahrung in der Anwendung von Skripten vertiefen.",
+    "keySkills": "Welche Fähigkeiten habe ich entwickelt?",
+    "keySkillsDetail": "Meine vielfältigen Berufserfahrungen ermöglichten es mir, wertvolle Kenntnisse zu sammeln und mein Verständnis für verschiedene Programmiersprachen durch das Schreiben von Skripten zu erweitern. Mein Interesse an der IT vertiefte sich weiter, da ich an der Schnittstelle von Wirtschaft und Technologie arbeitete. Während meines Zivildienstes im IT-Support erwarb ich umfassendes Wissen über verschiedene Systeme und deren Interaktionen, was meine technische Grundlage weiter festigte. Diese Erfahrung war besonders bereichernd während eines Ransomware-Angriffs, der bedeutende Einblicke in die Interaktion und Zusammenarbeit von Systemen in Krisensituationen bot.",
+    "continuousLearning": "Was motiviert mein kontinuierliches Lernen?",
+    "continuousLearningDetail": "Ich beschäftige mich regelmässig mit privaten Projekten, um neue Technologien zu erkunden und mein bestehendes Wissen zu festigen, wie zum Beispiel die Erstellung dieser Webseite mit AWS, um deren Funktionen in der Praxis zu verstehen. Ich bemühe mich stets, mein Fachwissen durch das Lesen technischer Bücher zu erweitern, insbesondere zu Themen wie Design Patterns. Mein Weg in der Softwareentwicklung dreht sich nicht nur um den Erwerb von Wissen, sondern auch darum, das Gelernte zur Lösung realer Probleme anzuwenden. Ich suche ständig nach Möglichkeiten, mich beruflich weiterzuentwickeln und Verantwortung in bestimmten Fachgebieten zu übernehmen.",
+    "careerGoals": "Was sind meine beruflichen Ziele?",
+    "careerGoalsDetail": "Ich strebe danach, in dynamischen Umgebungen zu arbeiten, die Innovationen vorantreiben, und bringe meine technischen Fähigkeiten, Kreativität und Teamfähigkeit ein, um einen bedeutenden Beitrag zu leisten. Ich freue mich darauf, zu bedeutenden Projekten beizutragen, die Innovation vorantreiben und einen Unterschied machen. Mit Opacc habe ich einen Arbeitgeber gefunden, in dem ich mich weiterentwickeln kann und meine Erfahrungen aus dem Studium zur Anwendung bringen darf.",
+    "projects": "Projekte",
+    "bachelorThesis": "Bachelorarbeit:",
+    "bachelorThesisDetail": "Konzept zur Implementierung von NFT-basierten Echtheitszertifikaten",
+    "bachelorThesisTasks": "Erforschung des Einsatzes von NFT-Technologie zur Stärkung der Kundenbindung, Analyse der Implementierungsoptionen und Erarbeitung von Vorschlägen, Erstellung eines schrittweisen Leitfadens zur Implementierung für das Unternehmen",
+    "practicalProject": "Praxisprojekt:",
+    "practicalProjectDetail": "Strategische Analyse und Optimierung des ERP-Datenmodells",
+    "practicalProjectTasks": "Visualisieren des aktuellen Datenflusses und der Geschäftsprozesse, Durchführung einer detaillierten Anforderungsanalyse, Vorschläge zur Optimierung des Datenmodells",
+    "moreDetails": "Mehr Details..."
+  },
+  "blog": {
+    "mainFeaturedPost": {
+      "title": "Letzte Blog-Posts",
+      "linkText": "Lebenslauf anzeigen..."
+    },
+    "featuredPost1": {
+      "title": "Meine Website ist jetzt live!",
+      "date": "22. Apr",
+      "description": "Ich freue mich, meine neue Website zu veröffentlichen! Hier werde ich Einblicke in technische Innovationen und mehr teilen.",
+      "imageLabel": "Diagramm AWS Infrastruktur"
+    },
+    "featuredPost2": {
+      "title": "Mein beruflicher Werdegang",
+      "date": "30. Dez",
+      "description": "ERP-Projektleiter mit Fokus auf Prozessanpassung und Programmierung. Erfahren Sie mehr über meine Fähigkeiten.",
+      "imageLabel": "Screenshot AboutMe-Tab"
+    },
+    "sidebar": {
+      "title": "Wer bin ich",
+      "description": "28-jähriger Wirtschaftsinformatik-Absolvent (FH) und ERP-Projektleiter mit grossem Interesse an der Technik. Ich bin motiviert neues zu Lernen, Verantwortung zu übernehmen und neue Möglichkeiten zu nutzen."
+    }
+
+  }, 
+  "aboutThisWebsite": {
+    "title": "Über diese Website",
+    "introduction": {
+      "title": "Einführung",
+      "text": "Diese persönliche Webseite dient als Plattform, um mich vorzustellen und einen detaillierten Überblick über die Technologien und Methoden zu geben, die bei ihrer Entwicklung verwendet wurden. Sie spiegelt mein technisches Können in der Webentwicklung wider und zeigt den kompetenten Einsatz verschiedener Werkzeuge vom Frontend bis zum Backend. Für weitere Details siehe bitte den in der Fusszeile verlinkten GitHub-Account."
+    },
+    "technologiesAndToolsUsed": {
+      "title": "Verwendete Technologien und Werkzeuge",
+      "overviewImageAlt": "CI/CD-Übersichtsschema",
+      "awsDetailImageAlt": "AWS-Detailschema"
+    },
+    "versionControlAndCiCd": {
+      "title": "Versionskontrolle und CI/CD",
+      "text": "Git mit GitHub wird für die Versionskontrolle verwendet, was eine effektive Verwaltung und Nachverfolgung von Codeänderungen ermöglicht. Eine CI/CD-Pipeline ist eingerichtet, um das GitHub-Repository direkt mit AWS zu verknüpfen. Diese Einrichtung automatisiert den Bereitstellungsprozess, bei dem neue Code-Commits im Hauptzweig automatisch Docker-Images erstellen und Updates in das AWS-Repository übertragen."
+    },
+    "awsInfrastructure": {
+      "title": "AWS-Infrastruktur",
+      "text": "Ursprünglich bestand die Bereitstellungsarchitektur auf AWS aus zwei EC2 Instanzen mit einem Load-Balancer, um die Lastverteilung zu optimieren und die Verfügbarkeit zu erhöhen. Kürzlich wurde auf auf Fargate umgestiegen, um die Kosten zu senken und gleichzeitig die Leistung und Skalierbarkeit zu erhalten. Ein HTTPS-Zertifikat auf AWS stellt sicher, dass alle zwischen dem Benutzer und dem Server übertragenen Daten sicher verschlüsselt sind."
+    },
+    "frontendDevelopment": {
+      "title": "Frontend-Entwicklung",
+      "text": "Das Frontend entstand aus der Grundlage eines Material UI-Template und sorgt für ein modernes Aussehen und wurde in TypeScript weiterentwickelt. Es wird auf einem Nginx-Server gehostet, der für seine Leistung und Zuverlässigkeit ausgewählt wurde."
+    },
+    "backendDevelopment": {
+      "title": "Backend-Entwicklung",
+      "text": "Das Backend befindet sich in Docker-Umgebungen, was die Konsistenz zwischen Entwicklungs- und Produktionsumgebungen fördert. Es wurde mit Spring Boot entwickelt und ist in MongoDB für das Datenbankmanagement integriert. Zu einem späteren Zeitpunkt wird Spring Secuirty integriert."
+    },
+    "dockerAndContainerization": {
+      "title": "Docker und Containerisierung",
+      "text": "Docker Compose verwaltet die Multi-Container-Docker-Anwendungen:",
+      "backendService": "Dieser Service basiert auf Spring Boot, konfiguriert mit den notwendigen Umgebungsvariablen für Datenbankverbindungen und mit Protokollen, die an AWS CloudWatch zur Überwachung weitergeleitet werden.",
+      "frontendService": "Dieser Service behandelt das React-basierte Frontend, das auf Nginx läuft, wobei die Protokolle ebenfalls über AWS CloudWatch verwaltet werden.",
+      "traefikService": "Leitet den Netzwerkverkehr zum entsprechenden Backend- oder Frontend-Dienst weiter und ist für die Verwaltung von HTTP-Verkehr konfiguriert."
+    },
+    "continuousMonitoringAndLoadBalancing": {
+      "title": "Kontinuierliche Überwachung und Lastverteilung",
+      "text": "AWS und Traefik gewährleisten eine reibungslose Verwaltung des Datenverkehrs und SSL/TLS-Konfigurationen, wobei Traefik den HTTP-Datenverkehr weiterleitet und AWS die HTTPS-Sicherheit übernimmt. Diese strategische Einrichtung hilft, die Benutzerlast effizient über die Server zu verteilen und Verkehrsspitzen zu bewältigen."
+    },
+    "repositoryAndCodeStructure": {
+      "title": "Repository- und Code-Struktur",
+      "text": "Die Code-Basis ist so konzipiert, dass er die Funktionalität verdeutlicht und die Wartbarkeit verbessert:",
+      "config": "Hier werden die Einstellungen für Sicherheit und Betriebsverhalten definiert.",
+      "controllers": "Kümmern sich um die Logik für HTTP-Anfragen und -Antworten.",
+      "services": "Die Geschäftslogik für Funktionen wie Benutzerkontoverwaltung und Blog-Operationen befindet sich hier.",
+      "repositories": "Interagieren mit MongoDB, um Datenoperationen zu verwalten.",
+      "models": " Sind Datenstrukturen innerhalb der Anwendung werden in diesem Abschnitt definiert."
+    },
+    "summary": {
+      "title": "Zusammenfassung",
+      "text": "Diese Webseite, die für Robustheit, Sicherheit und Reaktionsfähigkeit entwickelt wurde, nutzt moderne Technologie und bewährte Methoden in der Softwareentwicklung. Sie verkörpert meine Fähigkeiten und Motivation als Softwareentwickler, berufliche Herausforderungen im Technologiebereich zu meistern."
+    }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "purpose": {
+      "title": "Zweck der Website",
+      "text": "Diese Website soll Einblicke in den Aufbau der Seite selbst bieten und Ihnen vorstellen, wer ich bin."
+    },
+    "contactInformation": {
+      "title": "Kontaktinformationen",
+      "owner": "Inhaber:",
+      "ownerName": "César Jaquiéry",
+      "email": "E-Mail:",
+      "emailAddress": "c.jaquiery@gmail.com"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "text": "Die Informationen auf dieser Website werden regelmässig überprüft, können jedoch nicht auf Vollständigkeit, Richtigkeit oder Aktualität garantiert werden."
+    }
+  },
+  "layout": {
+    "headerTitle": "Césars Webseite",
+    "sections": {
+      "home": "Startseite",
+      "aboutMe": "Über mich",
+      "aboutThisWebsite": "Über diese Website",
+      "imprint": "Impressum"
+    },
+    "footer": {
+      "title": "Kontakt",
+      "description": "Kontaktieren Sie mich über LinkedIn oder Mail"
+    },
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  }, "featuredPost":{
+    "linkText": "Mehr Details..."
+  }
+}

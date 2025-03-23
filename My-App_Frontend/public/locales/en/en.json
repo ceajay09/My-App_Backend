@@ -1,0 +1,149 @@
+{
+  "aboutMe": {
+    "title": "About Me",
+    "contactDetails": "Contact Details",
+    "qualification": "Qualification:",
+    "qualificationDetail": "Business Information BSc (FHNW)",
+    "age": "Age:",
+    "ageDetail": "28",
+    "phoneNumber": "Phone Number:",
+    "showNumber": "Show Number",
+    "email": "E-Mail:",
+    "basedIn": "Based in:",
+    "basedInDetail": "Basel, Switzerland",
+    "downloadCV": "DOWNLOAD CV",
+    "interests": "Interests",
+    "interestList": "Small private IT projects, Climbing, Hiking, Water sports, Diving",
+    "hello": "Hello, it's me César",
+    "techJourney": "How did I begin my tech journey?",
+    "techJourneyDetail": "From a young age, I have been fascinated by the world of IT. My experience as a working student at a renowned pharmaceutical company enhanced my understanding of modern technologies and process optimization, deepening my interest in the field. During my studies in Business Informatics, where I focused on programming modules, I actively engaged in practical projects with companies as clients, eagerly taking on responsibilities and applying theoretical knowledge in real-world settings. With my employer Opacc, I can take on new responsibilities and deepen my programming experience in the use of scripts.",
+    "keySkills": "What key skills have I developed?",
+    "keySkillsDetail": "My diverse work experience allowed me to gain valuable knowledge and expand my understanding of different programming languages by writing scripts. It also deepened my interest in IT as I worked at the intersection of business and technology. During my civil service in IT support, I acquired comprehensive knowledge about diverse systems and their interactions, further solidifying my technical foundation. This experience was particularly enriching during a ransomware attack, which provided significant insights into how systems can interact and work together under crisis scenarios.",
+    "continuousLearning": "What motivates my continuous learning?",
+    "continuousLearningDetail": "I regularly engage in private projects to explore new technologies and consolidate my existing knowledge, like creating this webpage using AWS to understand its functionalities in practice. I always strive to extend my expertise by reading technical books, particularly on topics such as Design Patterns. My journey in software development is not just about acquiring knowledge; it's about applying what I learn to solve real-world problems. I am constantly seeking opportunities to grow professionally and take on responsibilities in specific areas of expertise.",
+    "careerGoals": "What are my career goals?",
+    "careerGoalsDetail": "I am eager to work in dynamic environments that drive innovation, bringing my technical skills, creativity, and team collaboration abilities to make a substantial impact. I look forward to contributing to meaningful projects that propel innovation and make a difference. In Opacc, I have found an employer where I can continue to develop myself and apply the knowledge and experience gained during my studies.",
+    "projects": "Projects",
+    "bachelorThesis": "Bachelor Thesis:",
+    "bachelorThesisDetail": "Concept for the implementation of NFT-based certificates of authenticity",
+    "bachelorThesisTasks": "Researching the use of NFT technology to strengthen customer loyalty, Analyzing implementation options and developing proposals, Creating a step-by-step implementation guide for the company",
+    "practicalProject": "Practical Project:",
+    "practicalProjectDetail": "Strategic analysis and optimization of the ERP data model",
+    "practicalProjectTasks": "Visualization of the current data flow and business processes, Implementation of a detailed requirements analysis, Suggestions for optimizing the data model",
+    "moreDetails": "More details..."
+  },
+  "blog": {
+    "mainFeaturedPost": {
+      "title": "Latest blog posts",
+      "description": "Multiple lines of text that form the lede, informing new readers quickly and efficiently",
+      "imageText": "main image description",
+      "linkText": "See full CV..."
+    },
+    "featuredPost1": {
+      "title": "My New Website Is Live Now!",
+      "date": "Apr 22",
+      "description": "I’m excited to launch my new website! Here, I'll share my coding journey, insights on tech innovations, and more. Let’s explore together.",
+      "imageLabel": "Diagram AWS Infrastructure"
+    },
+    "featuredPost2": {
+      "title": "Discover My Journey!",
+      "date": "Dec 01",
+      "description": "ERP Project Manager with a focus on process customization and programming. Explore more about my skills and journey.",
+      "imageLabel": "Screenshot AboutMe-Tab"
+    },
+    "sidebar": {
+      "title": "Who I Am",
+      "description": "28-year-old Business Information FH graduate and ERP Project Manager interested in technology. I am continuously learning and ready to take on responsibility and explore new opportunities."
+    }
+  },
+  "aboutThisWebsite": {
+    "title": "About This Website",
+    "introduction": {
+      "title": "Introduction",
+      "text": "This personal webpage serves as a platform to introduce myself and provide a detailed overview of the technologies and methodologies used in its development. It reflects my technical prowess in web development, illustrating a proficient use of various tools from front to back end. For additional details, please see the GitHub account linked in the footer."
+    },
+    "technologiesAndToolsUsed": {
+      "title": "Technologies and Tools Used",
+      "overviewImageAlt": "CI/CD-Overview diagram",
+      "awsDetailImageAlt": "AWS-Detail diagram"
+    },
+    "versionControlAndCiCd": {
+      "title": "Version Control and CI/CD",
+      "text": "Git with GitHub is used for version control, allowing effective management and tracking of codebase changes. A CI/CD pipeline is set up to link the GitHub repository directly to AWS. This setup automates the deployment process, where new code commits to the main branch trigger automatic Docker image creation and updates are pushed to the AWS repository."
+    },
+    "awsInfrastructure": {
+      "title": "AWS Infrastructure",
+      "text": "Initially, the deployment architecture on AWS consisted of two EC2 instances with load balancing to optimize load distribution and enhance availability. Recently, I transitioned to Fargate to reduce costs while maintaining performance and scalability. An HTTPS certificate on AWS ensures that all data transferred between the user and the server is securely encrypted."
+    },
+    "frontendDevelopment": {
+      "title": "Frontend Development",
+      "text": "The frontend uses Material UI templates for a modern aesthetic and was further developed in TypeScript. It is hosted on an Nginx server, chosen for its performance and reliability."
+    },
+    "backendDevelopment": {
+      "title": "Backend Development",
+      "text": "The backend is contained within Docker environments, promoting consistency across development and production setups. It is developed using Spring Boot and integrated with MongoDB for database management. Spring Security will be integrated in the next steps."
+    },
+    "dockerAndContainerization": {
+      "title": "Docker and Containerization",
+      "text": "Docker Compose manages the multi-container Docker applications:",
+      "backendService": "This service is based on Spring Boot, configured with necessary environment variables for database connections, and logs directed to AWS CloudWatch for monitoring.",
+      "frontendService": "This service handles the React-based frontend, running on Nginx, with logs also managed via AWS CloudWatch.",
+      "traefikService": "Directs network traffic to the appropriate backend or frontend service and is configured for HTTP traffic management."
+    },
+    "continuousMonitoringAndLoadBalancing": {
+      "title": "Continuous Monitoring and Load Balancing",
+      "text": "AWS and Traefik ensure smooth traffic management and SSL/TLS configurations, with Traefik directing HTTP traffic and AWS handling HTTPS security. This strategic setup helps distribute user load and manage traffic spikes efficiently across servers."
+    },
+    "repositoryAndCodeStructure": {
+      "title": "Repository and Code Structure",
+      "text": "The codebase is designed to clarify functionality and enhance maintainability:",
+      "config": "Settings for security and operational behaviors are defined here.",
+      "controllers": "These handle the logic for HTTP request and response operations.",
+      "services": "Business logic for functionalities such as user account management and blog operations is located here.",
+      "repositories": "These interact with MongoDB to manage data operations.",
+      "models": "Data structures within the application are defined in this section."
+    },
+    "summary": {
+      "title": "Summary",
+      "text": "Designed for robustness, security, and responsiveness, this webpage leverages state-of-the-art technology in software development. It embodies my capability as a software developer, prepared to address professional challenges in the technology sector."
+    }
+  },
+  "imprint": {
+    "title": "Imprint",
+    "purpose": {
+      "title": "Purpose of the Website",
+      "text": "This website is designed to offer insights into the construction of the site itself and to introduce you to who I am."
+    },
+    "contactInformation": {
+      "title": "Contact Information",
+      "owner": "Owner:",
+      "ownerName": "César Jaquiéry",
+      "email": "Email:",
+      "emailAddress": "c.jaquiery@gmail.com"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "text": "Information on this website is reviewed regularly but cannot guarantee its completeness, accuracy, or currentness."
+    }
+  },
+  "layout": {
+    "headerTitle": "César's Webpage",
+    "sections": {
+      "home": "Home",
+      "aboutMe": "About Me",
+      "aboutThisWebsite": "About This Website",
+      "imprint": "Imprint"
+    },
+    "footer": {
+      "title": "Contact",
+      "description": "I'm just a message away."
+    },
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "featuredPost": {
+    "linkText": "Learn more..."
+  }
+}
